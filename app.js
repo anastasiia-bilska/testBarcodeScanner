@@ -33,7 +33,7 @@ document.addEventListener('keydown', (event) => {
 
   scanningInterval = setInterval(() => {
     barcode = '';
-  }, 20);
+  }, 100);
 });
 
 
