@@ -26,8 +26,8 @@ document.addEventListener('keydown', (event) => {
       barcode += `${event.key}`;
     }
 
-    interval = setInterval(() => {
+    scanningInterval = setInterval(() => {
       barcode = '';
-    }, 20)
+    }, 20);
   }
 });
