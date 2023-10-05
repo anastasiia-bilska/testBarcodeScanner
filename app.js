@@ -22,6 +22,8 @@ document.addEventListener('keydown', (event) => {
   if (scanningInterval) {
     clearInterval(scanningInterval);
   }
+  
+  console.log('typing!')
 
   if (event.code === 'Enter') {
     if (barcode) {
