@@ -23,11 +23,11 @@ document.addEventListener('keydown', (event) => {
     }
 
     if (event.key !== 'Shift') {
-      barcode += event.key;
+      barcode += `${event.key}`;
     }
 
     interval = setInterval(() => {
       barcode = '';
-    }, 100)
+    }, 20)
   }
 });
