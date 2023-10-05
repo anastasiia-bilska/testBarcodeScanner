@@ -19,7 +19,7 @@ const handleBarcode = () => {
 };
 
 document.addEventListener('keydown', (event) => {
-  event.preventDefault();
+  event.stopPropagation();
 
   if (scanningInterval) {
     clearInterval(scanningInterval);
