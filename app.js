@@ -11,6 +11,12 @@ input.addEventListener('input', (event) => {
   console.log('INPUT: ' + event.target.value);
 })
 
+input.addEventListener('keydown', (event) => {
+  event.stopPropagation();
+
+  console.log('KEYDOWN: ' + event.target.value);
+})
+
 const handleBarcode = (barcodeFinal) => {
   const div = document.querySelector('#code');
 
