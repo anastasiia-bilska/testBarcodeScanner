@@ -6,7 +6,7 @@ let scanningInterval = null;
 const handleBarcode = () => {
   const div = document.querySelector('#code');
 
-  div.innerHTML = barcode
+  div.innerHTML = barcode;
 };
 
 document.addEventListener('keydown', (event) => {
@@ -21,14 +21,14 @@ document.addEventListener('keydown', (event) => {
       barcode = '';
       return;
     }
-
-    if (event.key !== 'Shift') {
-      barcode += `${event.key}`;
-      console.log({barcode});
-    }
-
-    scanningInterval = setInterval(() => {
-      barcode = '';
-    }, 100);
   }
+
+  if (event.key !== 'Shift') {
+    barcode += `${event.key}`;
+    console.log({ barcode });
+  }
+
+  scanningInterval = setInterval(() => {
+    barcode = '';
+  }, 100);
 });
