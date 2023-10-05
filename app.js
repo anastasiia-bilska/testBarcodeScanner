@@ -3,20 +3,6 @@
 let barcode = '';
 let scanningInterval = null;
 
-const input = document.querySelector('input');
-
-input.addEventListener('input', (event) => {
-  event.stopPropagation();
-
-  console.log('INPUT: ' + event.target.value);
-})
-
-input.addEventListener('keydown', (event) => {
-  event.stopPropagation();
-
-  console.log('KEYDOWN: ' + event.target.value);
-})
-
 const handleBarcode = (barcodeFinal) => {
   const div = document.querySelector('#code');
 
