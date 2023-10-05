@@ -11,23 +11,21 @@ input.addEventListener('input', (event) => {
   console.log('INPUT: ' + event.target.value);
 })
 
-const handleBarcode = () => {
+const handleBarcode = (barcodeFinal) => {
   const div = document.querySelector('#code');
 
-  div.innerHTML = barcode;
-  console.log('BARCODE FINAL: ' + barcode);
+  div.innerHTML = barcodeFinal;
+  console.log('BARCODE FINAL: ' + barcodeFinal);
 };
 
 document.addEventListener('keydown', (event) => {
-  event.stopPropagation();
-
   if (scanningInterval) {
     clearInterval(scanningInterval);
   }
 
   if (event.code === 'Enter') {
     if (barcode) {
-      handleBarcode();
+      handleBarcode(barcode);
 
       barcode = '';
       return;
