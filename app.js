@@ -30,8 +30,6 @@ document.addEventListener('keydown', (event) => {
   if (scanningInterval) {
     clearInterval(scanningInterval);
   }
-  
-  input.blur();
 
   console.log('typing!')
 
