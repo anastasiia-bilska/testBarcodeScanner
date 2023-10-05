@@ -6,7 +6,7 @@ let scanningInterval = null;
 const input = document.querySelector('input');
 
 input.addEventListener('input', (event) => {
-  event.stopPropagation();
+  event.stopImmediatePropagation();
 
   console.log('INPUT: ' + event.target.value);
 })
@@ -19,6 +19,8 @@ const handleBarcode = () => {
 };
 
 document.addEventListener('keydown', (event) => {
+  // event.stopPropagation();
+
   if (scanningInterval) {
     clearInterval(scanningInterval);
   }
