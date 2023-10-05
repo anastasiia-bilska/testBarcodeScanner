@@ -11,7 +11,6 @@ const handleBarcode = (barcodeFinal) => {
 };
 
 document.addEventListener('keydown', (event) => {
-  input.blur();
 
   if (scanningInterval) {
     clearInterval(scanningInterval);
