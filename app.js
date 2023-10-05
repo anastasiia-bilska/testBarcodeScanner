@@ -3,10 +3,19 @@
 let barcode = '';
 let scanningInterval = null;
 
+const input = document.querySelector('input');
+
+input.addEventListener('input', (event) => {
+  event.stopPropagation();
+
+  console.log('INPUT: ' + event.target.value);
+})
+
 const handleBarcode = () => {
   const div = document.querySelector('#code');
 
   div.innerHTML = barcode;
+  console.log('BARCODE FINAL: ' + barcode);
 };
 
 document.addEventListener('keydown', (event) => {
@@ -25,10 +34,11 @@ document.addEventListener('keydown', (event) => {
 
   if (event.key !== 'Shift') {
     barcode += `${event.key}`;
-    console.log({ barcode });
   }
 
   scanningInterval = setInterval(() => {
     barcode = '';
-  }, 100);
+  }, 20);
 });
+
+
